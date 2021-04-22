@@ -1,9 +1,13 @@
 /** 
- * combining adjacent lists (as above)
+ * DONE
+ * combining adjacent lists
  * combining adjacent blockquotes
  * removing lists with no items in them
+ * TODO
  * removing links with no content (zero-width links)
  * turning URLs in text into links that go to that url
+ * render HTML for lists with nested list-items
+ * 
  */
 
 // Normalize the docuement object
@@ -15,7 +19,6 @@ exports.checkDoc = (obj) => {
     };
 
     for(let i = 0; i < doc_children.length; i++){
-
         // check if there are two lists or two blockquotes adjacent to one another
         if(doc_children[i].type === 'list' || doc_children[i].type === 'blockquote'){
            // check if the child is at the end of the document object
